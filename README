@@ -1,0 +1,24 @@
+Modulo puppet per installare shibboleth2-sp su Debian.
+
+Questo modulo e' stato testato su Debian squeeze.
+
+Prerequisiti: ci si aspetta che sia gia' presente apache2 con mod_ssl abilitato.
+
+Funzionamento: 
+Il modulo genera chiave e certificato e li salva sul puppetmaster, poi li trasferisce all'host. L'entityId dell'host e' impostato a: https://$fqdn/shibboleth.
+
+Se si vuole personalizzare il file shibboleth2.xml per un certo host, creare il file shibboleth2.xml.$hostname.erb in ~/templates
+
+---------------------
+Puppet module to install shibboleth2-sp on Debian.
+
+Tested on Debian squeeze.
+
+Prerequisites: apache2 with mod_ssl
+
+How it works:
+The module create key and certificates on puppetmaster, the move them to host. Host EntityId is: https://$fqdn/shibboleth.
+
+If you want to modify shibboleth2.xml for a given host, please create a shibboleth2.xml.$hostname.erb in ~/templates.
+
+
