@@ -1,0 +1,8 @@
+<%=
+  begin
+    scope.function_template(["shib2/security.#{hostname}.erb"])
+  rescue
+    scope.function_template(["shib2/security.default.erb"])
+  end
+-%>
+
